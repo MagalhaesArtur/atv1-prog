@@ -28,3 +28,5 @@ int alu_igual(Aluno *aluno1, Aluno *aluno2);
 
 /* Retorna o tamanho em bytes do TAD aluno. */
 int alu_tamanho();
+
+int alu_igual(Aluno *aluno1, Aluno *aluno2);

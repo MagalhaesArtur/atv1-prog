@@ -3,201 +3,201 @@
 #include <stdlib.h>
 #include <string.h>
 
-// float teste_aluno_novo_com_dados_validos() {
-//   char nome[50];
-//   char curso[30];
-//   float pontuacao = 0;
+float teste_aluno_novo_com_dados_validos() {
+  char nome[50];
+  char curso[30];
+  float pontuacao = 0;
 
-//   Aluno *aluno = alu_novo(1, "Abraão", "Computação");
+  Aluno *aluno = alu_novo(1, "Abraão", "Computação");
 
-//   if (aluno != NULL) {
-//     printf("[Passou 1.50] - Teste da função alu_novo() com dados válidos!\n");
-//     pontuacao = 1.5;
-//   } else {
-//     printf("[Falhou 0.00] - Teste da função alu_novo() com dados válidos!\n");
-//   }
-//   return pontuacao;
-// }
+  if (aluno != NULL) {
+    printf("[Passou 1.50] - Teste da função alu_novo() com dados válidos!\n");
+    pontuacao = 1.5;
+  } else {
+    printf("[Falhou 0.00] - Teste da função alu_novo() com dados válidos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_novo_com_dados_invalidos() {
-//   char nome[55] = "N";
-//   char curso[35] = "C";
-//   float pontuacao = 0;
+float teste_aluno_novo_com_dados_invalidos() {
+  char nome[55] = "N";
+  char curso[35] = "C";
+  float pontuacao = 0;
 
-//   for (int i = 0; i < 53; i++) {
-//     strcat(nome, "N");
-//   }
+  for (int i = 0; i < 53; i++) {
+    strcat(nome, "N");
+  }
 
-//   for (int i = 0; i < 33; i++) {
-//     strcat(curso, "C");
-//   }
+  for (int i = 0; i < 33; i++) {
+    strcat(curso, "C");
+  }
 
-//   Aluno *aluno = alu_novo(-1, nome, curso);
-//   if (aluno == NULL) {
-//     printf("[Passou 1.00] - Teste da função alu_novo() com dados inválidos!\n");
-//     pontuacao = 1;
-//   } else {
-//     printf("[Falhou 0.00] - Teste da função alu_novo() com dados inválidos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(-1, nome, curso);
+  if (aluno == NULL) {
+    printf("[Passou 1.00] - Teste da função alu_novo() com dados inválidos!\n");
+    pontuacao = 1;
+  } else {
+    printf("[Falhou 0.00] - Teste da função alu_novo() com dados inválidos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_novo_com_dados_nulos() {
-//   float pontuacao = 0;
+float teste_aluno_novo_com_dados_nulos() {
+  float pontuacao = 0;
 
-//   Aluno *aluno = alu_novo(-1, NULL, NULL);
-//   if (aluno == NULL) {
-//     printf("[Passou 0.67] - Teste da função alu_novo() com dados nulos!\n");
-//     pontuacao = 0.67;
-//   } else {
-//     printf("[Falhou 0.00] - Teste da função alu_novo() com dados nulos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(-1, NULL, NULL);
+  if (aluno == NULL) {
+    printf("[Passou 0.67] - Teste da função alu_novo() com dados nulos!\n");
+    pontuacao = 0.67;
+  } else {
+    printf("[Falhou 0.00] - Teste da função alu_novo() com dados nulos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_acessa_com_dados_validos() {
-//   int matricula;
-//   char nome[50];
-//   char curso[30];
-//   float pontuacao = 0;
+float teste_aluno_acessa_com_dados_validos() {
+  int matricula;
+  char nome[50];
+  char curso[30];
+  float pontuacao = 0;
 
-//   Aluno *aluno = alu_novo(1, "Abraão", "Computação");
-//   if (aluno != NULL) {
-//     alu_acessa(aluno, &matricula, nome, curso);
-//     if (matricula == 1 && strcmp(nome, "Abraão") == 0 &&
-//         strcmp(curso, "Computação") == 0) {
-//       printf(
-//           "[Passou 1.50] - Teste da função alu_acessa() com dados válidos!\n");
-//       pontuacao = 1.5;
-//     } else {
-//       printf(
-//           "[Falhou 0.00] - Teste da função alu_acessa()com dados válidos!\n");
-//     }
-//   } else {
-//     printf("[Falhou 0.00] - Teste da função alu_acessa() com dados válidos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(1, "Abraão", "Computação");
+  if (aluno != NULL) {
+    alu_acessa(aluno, &matricula, nome, curso);
+    if (matricula == 1 && strcmp(nome, "Abraão") == 0 &&
+        strcmp(curso, "Computação") == 0) {
+      printf(
+          "[Passou 1.50] - Teste da função alu_acessa() com dados válidos!\n");
+      pontuacao = 1.5;
+    } else {
+      printf(
+          "[Falhou 0.00] - Teste da função alu_acessa()com dados válidos!\n");
+    }
+  } else {
+    printf("[Falhou 0.00] - Teste da função alu_acessa() com dados válidos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_atribui_com_dados_validos() {
-//   int matricula;
-//   char nome[50];
-//   char curso[30];
-//   float pontuacao = 0;
+float teste_aluno_atribui_com_dados_validos() {
+  int matricula;
+  char nome[50];
+  char curso[30];
+  float pontuacao = 0;
 
-//   Aluno *aluno = alu_novo(1, "Abraão", "Computação");
-//   if (aluno != NULL) {
-//     alu_atribui(aluno, 2, "Jacó", "Sistemas de Informação");
-//     alu_acessa(aluno, &matricula, nome, curso);
-//     if (matricula == 2 && strcmp(nome, "Jacó") == 0 &&
-//         strcmp(curso, "Sistemas de Informação") == 0) {
-//       printf(
-//           "[Passou 1.50] - Teste da função alu_atribui() com dados válidos!\n");
-//       pontuacao = 1.5;
-//     } else {
-//       printf(
-//           "[Falhou 0.00] - Teste da função alu_atribui() com dados válidos!\n");
-//     }
-//   } else {
-//     printf(
-//         "[Falhou 0.00] - Teste da função alu_atribui() com dados válidos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(1, "Abraão", "Computação");
+  if (aluno != NULL) {
+    alu_atribui(aluno, 2, "Jacó", "Sistemas de Informação");
+    alu_acessa(aluno, &matricula, nome, curso);
+    if (matricula == 2 && strcmp(nome, "Jacó") == 0 &&
+        strcmp(curso, "Sistemas de Informação") == 0) {
+      printf(
+          "[Passou 1.50] - Teste da função alu_atribui() com dados válidos!\n");
+      pontuacao = 1.5;
+    } else {
+      printf(
+          "[Falhou 0.00] - Teste da função alu_atribui() com dados válidos!\n");
+    }
+  } else {
+    printf(
+        "[Falhou 0.00] - Teste da função alu_atribui() com dados válidos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_atribui_com_dados_invalidos() {
-//   int matricula;
-//   char nome[55] = "N";
-//   char curso[35] = "C";
-//   float pontuacao = 0;
+float teste_aluno_atribui_com_dados_invalidos() {
+  int matricula;
+  char nome[55] = "N";
+  char curso[35] = "C";
+  float pontuacao = 0;
 
-//   for (int i = 0; i < 53; i++) {
-//     strcat(nome, "N");
-//   }
+  for (int i = 0; i < 53; i++) {
+    strcat(nome, "N");
+  }
 
-//   for (int i = 0; i < 33; i++) {
-//     strcat(curso, "C");
-//   }
+  for (int i = 0; i < 33; i++) {
+    strcat(curso, "C");
+  }
 
-//   Aluno *aluno = alu_novo(1, "Abraão", "Computação");
-//   if (aluno != NULL) {
-//     alu_atribui(aluno, 2, nome, curso);
-//     alu_acessa(aluno, &matricula, nome, curso);
-//     if (matricula == 1 || strcmp(nome, "Abraão") == 0 ||
-//         strcmp(curso, "Computação") == 0) {
-//       printf("[Passou 1.00] - Teste da função alu_atribui() com dados "
-//              "inválidos!\n");
-//       pontuacao = 1;
-//     } else {
-//       printf("[Falhou 0.00] - Teste da função alu_atribui() com dados "
-//              "inválidos!\n");
-//     }
-//   } else {
-//     printf(
-//         "[Falhou 0.00] - Teste da função alu_atribui() com dados inválidos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(1, "Abraão", "Computação");
+  if (aluno != NULL) {
+    alu_atribui(aluno, 2, nome, curso);
+    alu_acessa(aluno, &matricula, nome, curso);
+    if (matricula == 1 || strcmp(nome, "Abraão") == 0 ||
+        strcmp(curso, "Computação") == 0) {
+      printf("[Passou 1.00] - Teste da função alu_atribui() com dados "
+             "inválidos!\n");
+      pontuacao = 1;
+    } else {
+      printf("[Falhou 0.00] - Teste da função alu_atribui() com dados "
+             "inválidos!\n");
+    }
+  } else {
+    printf(
+        "[Falhou 0.00] - Teste da função alu_atribui() com dados inválidos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_atribui_com_dados_nulos() {
-//   int matricula;
-//   char nome[50];
-//   char curso[30];
-//   float pontuacao = 0;
+float teste_aluno_atribui_com_dados_nulos() {
+  int matricula;
+  char nome[50];
+  char curso[30];
+  float pontuacao = 0;
 
-//   Aluno *aluno = alu_novo(1, "Abraão", "Computação");
-//   if (aluno != NULL) {
-//     alu_atribui(NULL, -1, NULL, NULL);
-//     alu_acessa(aluno, &matricula, nome, curso);
-//     if (matricula == 1 && strcmp(nome, "Abraão") == 0 &&
-//         strcmp(curso, "Computação") == 0) {
-//       printf(
-//           "[Passou 0.67] - Teste da função alu_atribui() com dados nulos!\n");
-//       pontuacao = 0.67;
-//     } else {
-//       printf(
-//           "[Falhou 0.00] - Teste da função alu_atribui() com dados nulos!\n");
-//     }
-//   } else {
-//     printf("[Falhou 0.00] - Teste da função alu_atribui() com dados nulos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(1, "Abraão", "Computação");
+  if (aluno != NULL) {
+    alu_atribui(NULL, -1, NULL, NULL);
+    alu_acessa(aluno, &matricula, nome, curso);
+    if (matricula == 1 && strcmp(nome, "Abraão") == 0 &&
+        strcmp(curso, "Computação") == 0) {
+      printf(
+          "[Passou 0.67] - Teste da função alu_atribui() com dados nulos!\n");
+      pontuacao = 0.67;
+    } else {
+      printf(
+          "[Falhou 0.00] - Teste da função alu_atribui() com dados nulos!\n");
+    }
+  } else {
+    printf("[Falhou 0.00] - Teste da função alu_atribui() com dados nulos!\n");
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_libera_com_dados_validos() {
-//   int matricula;
-//   char nome[50];
-//   char curso[30];
-//   float pontuacao = 0;
+float teste_aluno_libera_com_dados_validos() {
+  int matricula;
+  char nome[50];
+  char curso[30];
+  float pontuacao = 0;
 
-//   Aluno *aluno = alu_novo(1, "Abraão", "Computação");
-//   alu_libera(&aluno);
-//   if (aluno != NULL) {
-//     printf("[Falhou 0.00] - Teste da função alu_libera() com dados válidos!\n");
-//     pontuacao = 0.0;
-//   } else {
-//     printf("[Passou 1.50] - Teste da função alu_libera() com dados válidos!\n");
-//     pontuacao = 1.5;
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = alu_novo(1, "Abraão", "Computação");
+  alu_libera(&aluno);
+  if (aluno != NULL) {
+    printf("[Falhou 0.00] - Teste da função alu_libera() com dados válidos!\n");
+    pontuacao = 0.0;
+  } else {
+    printf("[Passou 1.50] - Teste da função alu_libera() com dados válidos!\n");
+    pontuacao = 1.5;
+  }
+  return pontuacao;
+}
 
-// float teste_aluno_libera_com_dados_nulos() {
-//   int matricula;
-//   char nome[50];
-//   char curso[30];
-//   float pontuacao = 0;
+float teste_aluno_libera_com_dados_nulos() {
+  int matricula;
+  char nome[50];
+  char curso[30];
+  float pontuacao = 0;
 
-//   Aluno *aluno = NULL;
-//   alu_libera(&aluno);
-//   if (aluno == NULL) {
-//     printf("[Passou 0.67] - Teste da função alu_libera() com dados nulos!\n");
-//     pontuacao = 0.67;
-//   } else {
-//     printf("[Falhou 0.00] - Teste da função alu_libera() com dados nulos!\n");
-//   }
-//   return pontuacao;
-// }
+  Aluno *aluno = NULL;
+  alu_libera(&aluno);
+  if (aluno == NULL) {
+    printf("[Passou 0.67] - Teste da função alu_libera() com dados nulos!\n");
+    pontuacao = 0.67;
+  } else {
+    printf("[Falhou 0.00] - Teste da função alu_libera() com dados nulos!\n");
+  }
+  return pontuacao;
+}
 
 float teste_fila_cria_com_dados_validos() {
   float pontuacao = 0;
@@ -228,9 +228,7 @@ float teste_fila_libera_com_dados_validos() {
 
 float teste_fila_libera_com_dados_nulos() {
   float pontuacao = 0;
-  Fila *fila = NULL;
-  fila_libera(&fila);
-  if (fila == NULL) {
+  if (fila_libera(NULL) == 0) {
     printf("[Passou 0.50] - Teste da função fila_libera() com dados nulos!\n");
     pontuacao = 0.50;
   } else {
@@ -323,8 +321,7 @@ float teste_fila_insere_com_dados_nulos() {
           "[Falhou 0.00] - Teste da função fila_insere() com dados nulos!\n");
     }
   } else {
-    printf(
-        "[Falhou 0.00] - Teste da função fila_adiciona() com dados nulos!\n");
+    printf("[Falhou 0.00] - Teste da função fila_insere() com dados nulos!\n");
   }
   return pontuacao;
 }
@@ -345,7 +342,7 @@ float teste_fila_retira_com_dados_validos() {
       aluno = fila_retira(fila);
       if (alu_igual(aluno, jaco) == 1) {
         aluno = fila_retira(fila);
-        if (alu_igual(aluno, jaco) == 1) {
+        if (alu_igual(aluno, jose) == 1) {
           printf("[Passou 1.00] - Teste da função fila_retira() com dados "
                  "válidos!\n");
           pontuacao = 1.0;
@@ -529,8 +526,7 @@ float bateria_testes_01() {
 }
 
 float bateria_testes_02() {
-  printf("====================================================================="
-         "====================\n");
+  printf("=========================================================================================\n");
   printf(".:: Teste do TAD Aluno: Bateria de Testes 02 ::.\n");
   printf("====================================================================="
          "====================\n");

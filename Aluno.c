@@ -97,19 +97,33 @@ void alu_atribui(Aluno *aluno, int matricula, char *nome, char *curso){
        
     }
 
-    void alu_acessa(Aluno *aluno, int *matricula, char *nome, char *curso){
-        *matricula =  aluno->matricula;
+void alu_acessa(Aluno *aluno, int *matricula, char *nome, char *curso){
+    *matricula =  aluno->matricula;
 
-        for(int i = 0; i < 50 ; ++i){
-            nome[i] = aluno->nome[i];
-        }
-
-         for(int i = 0; i < 30 ; ++i){
-            curso[i] = aluno->curso[i];
-        }
+    for(int i = 0; i < 50 ; ++i){
+        nome[i] = aluno->nome[i];
     }
 
-    void alu_libera(Aluno **aluno){
-        free(*aluno);
-        *aluno = NULL;
+    for(int i = 0; i < 30 ; ++i){
+        curso[i] = aluno->curso[i];
     }
+}
+
+void alu_libera(Aluno **aluno){
+    free(*aluno);
+    *aluno = NULL;
+}
+
+int alu_igual(Aluno *aluno1, Aluno *aluno2){
+    if(aluno1 == NULL || aluno2 == NULL){
+        return -1;
+    }
+    if(aluno1->curso == aluno2->curso && aluno1->matricula == aluno2->matricula && aluno1->nome == aluno2->nome ){
+        return 1;
+    }
+    if(aluno1->curso != aluno2->curso || aluno1->matricula != aluno2->matricula || aluno1->nome != aluno2->nome ){
+        return 0;
+    }
+
+}
+
